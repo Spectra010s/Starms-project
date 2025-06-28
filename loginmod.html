@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login – STARMS Catering</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Admin login page for STARMS Catering. Secure access to manage user reviews and feedback.">
+
+   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <link rel="stylesheet" href="loginmod.css">
+</head>
+<body>
+    <main class="main">
+        <div class="login-container">
+            <div class="login-box">
+            <h2>Admin Login</h2>
+                <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="error-msg" class="error"></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+         <p>&copy; 2025 STARMS Catering | All Rights Reserved</p>
+         <p>Website by <a href="https://x.com/spectra010s" target="_blank">SpectrA</a></p>
+         <p>Contact: <a href="mailto:spectra010@gmail.com">spectra010s@gmail.com</a></p>
+        </div>
+    </footer>
+
+  <script src="loginmod.js"></script>
+</body>
+</html>

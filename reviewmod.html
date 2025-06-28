@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin review moderation page for STARMS Catering. Manage user reviews, delete inappropriate content, and ensure quality feedback.">
+  <meta name="keywords" content="admin, review moderation, STARMS Catering, user reviews, delete reviews, feedback management">
+  <meta name="author" content="SpectrA">
+  <title>Admin Review Moderation</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  
+  <link rel="stylesheet" href="reviewmod.css">
+</head>
+<body>
+  <main class="main-content">
+   <h1 class="review-moderation">Review Moderation</h1>
+   <p>Welcome to the admin review moderation page. Here you can manage user reviews.</p>
+   <p class="instructions">Click on the "Delete" button to remove a review.</p>
+   <div id="adminReviewsList"></div>
+    <div id="adminReviewsList"></div>
+    <button class="logoutBtn" id="logoutBtn">Logout</button>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <p>&copy; 2025 STARMS Catering | All Rights Reserved</p>
+        <p>Website by <a class="a" href="https://x.com/spectra010s" target="_blank">SpectrA</a></p>
+        <p>Contact: <a class="a" href="mailto:spectra010s@gmail.com">spectra010s@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="reviewmod.js"></script>
+</body>
+</html>

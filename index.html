@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>STARMS Catering - Premium Event Catering Services</title>
+
+  <meta name="description" content="STARMS Catering - Professional catering services for all your special events. Quality food, exceptional service, memorable experiences.">
+  <meta name="keywords" content="catering, events, food service, wedding catering, corporate catering, party catering, STARMS">
+  <meta name="author" content="STARMS Catering">
+  <meta property="og:title" content="STARMS Catering - Premium Event Catering Services">
+  <meta property="og:description" content="Transform your events with our exceptional catering services. From intimate gatherings to grand celebrations.">
+  <meta property="og:image" content="https://starms-catering.rf.gd/images/preview.jpg">
+  <meta property="og:url" content="https://starms-catering.rf.gd">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="STARMS Catering - Premium Event Catering Services">
+  <meta name="twitter:description" content="Transform your events with our exceptional catering services. From intimate gatherings to grand celebrations.">
+  <meta name="twitter:image" content="https://starms-catering.rf.gd/images/preview.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="starms-nav">
+        <div class="starms-nav-container">
+            <div class="starms-nav-content">
+                <div class="starms-logo">
+                    <div class="starms-logo-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <span class="starms-logo-text">STARMS</span>
+                </div>
+                
+                <ul class="starms-nav-desktop">
+                    <li><button class="starms-nav-link" data-section="home">Home</button></li>
+                    <li><button class="starms-nav-link" data-section="about">About</button></li>
+                    <li><button class="starms-nav-link" data-section="menu">Our Menu</button></li>
+                    <li><button class="starms-nav-link" data-section="gallery">Gallery</button></li>
+                    <li><button class="starms-nav-link" data-section="contact">Contact</button></li>
+                    <li><button class="starms-nav-link" data-section="faq">FAQ</button></li>
+                    <li><button class="starms-nav-link" data-section="reviews">Reviews</button></li>
+                </ul>
+
+                <button class="starms-nav-mobile-btn" aria-label="Open navigation menu">
+                    <span class="starms-nav-mobile-label">Menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+               <button class="starms-nav-mobile-close" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i> 
+                </button>
+            </div>
+        </div>
+        
+        <div class="starms-nav-mobile" style="display: none;">
+            <div class="starms-nav-mobile-content">
+                <button class="starms-nav-mobile-link" data-section="home">Home</button>
+                <button class="starms-nav-mobile-link" data-section="about">About</button>
+                <button class="starms-nav-mobile-link" data-section="menu">Our Menu</button>
+                <button class="starms-nav-mobile-link" data-section="gallery">Gallery</button>
+                <button class="starms-nav-mobile-link" data-section="contact">Contact</button>
+                <button class="starms-nav-mobile-link" data-section="faq">FAQ</button>
+                <button class="starms-nav-mobile-link" data-section="reviews">Reviews</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="starms-loader">
+        <div class="starms-loader-content">
+            <div class="starms-loader-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="starms-loader-spinner">
+                STARMS
+            </div>
+        </div>
+    </div>
+
+    <div class="starms-reviews-loader">
+        <div class="starms-reviews-loader-content">
+            <div class="starms-reviews-loader-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="starms-reviews-loader-spinner">
+                STARMS
+            </div>
+        </div>
+    </div>
+
+    <main class="starms-main">
+        <section id="home" class="starms-section active">
+            <div class="starms-hero">
+                <div class="starms-hero-overlay"></div>
+                <div class="starms-hero-content">
+                    <h1 class="starms-hero-title">
+                        <span class="starms-brand-color">STARMS</span> Catering
+                    </h1>
+                    <p class="starms-hero-subtitle">
+                        Transform your events with exceptional culinary experiences. From intimate gatherings to grand celebrations, we bring flavor and elegance to every occasion. 
+                    </p>
+                    <h3 class="starms-hero-subtitle h3">WE CHOOSE QUALITY OVER QUANTITY.</h3>
+
+                    <div class="starms-hero-buttons">
+                        <button class="starms-btn starms-btn-primary" data-section="contact">
+                            <i class="fas fa-phone"></i>Book Now
+                        </button>
+                        <button class="starms-btn starms-btn-secondary" data-section="menu">
+                            <i class="fas fa-eye"></i>View Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="starms-features">
+                <div class="starms-container">
+                    <div class="starms-features-header">
+                        <h2>Why Choose STARMS?</h2>
+                        <p>We don't just serve food – we create memorable experiences that bring people together.</p>
+                    </div>
+                    
+                    <div class="starms-features-grid">
+                        <div class="starms-feature">
+                            <div class="starms-feature-icon">
+                                <i class="fas fa-chef-hat"></i>
+                            </div>
+                            <h3>Expert Chefs</h3>
+                            <p>Our professional chefs craft every dish with passion, using fresh, high-quality ingredients to create unforgettable flavors.</p>
+                        </div>
+                        
+                        <div class="starms-feature">
+                            <div class="starms-feature-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>Event Specialists</h3>
+                            <p>From weddings to corporate events, we handle every detail to ensure your special occasion is perfectly executed.</p>
+                        </div>
+                        
+                        <div class="starms-feature">
+                            <div class="starms-feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Personal Touch</h3>
+                            <p>We work closely with you to understand your vision and customize every aspect of your catering experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="starms-section starms-about-section">
+            <div class="starms-container">
+                <div class="starms-section-header">
+                    <h2>About STARMS Catering</h2>
+                    <p>Bringing exceptional culinary experiences to life since our founding</p>
+                </div>
+                
+                <div class="starms-about">
+                    <div class="starms-about-content">
+                        <h2>Our Story</h2>
+                        <p>
+                            At STARMS Catering, we believe that great food brings people together. Founded with a passion for culinary excellence, we have been serving the community with premium catering services that transform ordinary events into extraordinary memories.
+                        </p>
+                        <p>
+                            Our team of experienced chefs and event specialists work tirelessly to ensure every detail is perfect. From selecting the finest ingredients to presenting beautifully crafted dishes, we are committed to exceeding your expectations.
+                        </p>
+                        <p>
+                            Whether you're planning an intimate dinner party, a grand wedding reception, or a corporate gathering, STARMS Catering brings professionalism, creativity, and exceptional taste to every occasion.
+                        </p>
+                        <p>
+                           WE CHOOSE QUALITY OVER QUANTITY!!!
+                        </p>
+                    </div>
+                    
+                    <div class="starms-stats">
+                        <div class="starms-stat">
+                            <div class="starms-stat-number">200+</div>
+                            <div class="starms-stat-label">Events Catered</div>
+                        </div>
+                        <div class="starms-stat">
+                            <div class="starms-stat-number">5+</div>
+                            <div class="starms-stat-label">Years Of Experience</div>
+                        </div>
+                        <div class="starms-stat">
+                            <div class="starms-stat-number">100%</div>
+                            <div class="starms-stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="starms-section starms-menu-section">
+            <div class="starms-container">
+                <div class="starms-section-header">
+                    <h2>Our Menu</h2>
+                    <p>Discover our carefully crafted selection of dishes, made with the finest ingredients</p>
+                </div>
+                
+                <div class="starms-menu-grid">
+                    <div class="starms-menu-category">
+                        <div class="starms-menu-category-header">
+                            <div class="starms-menu-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3>Main Courses</h3>
+                        </div>
+                        <ul class="starms-menu-items">
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Grilled Chicken Platter</h4>
+                                    <p>Tender grilled chicken with herbs and spices</p>
+                                </div>
+                                <span class="starms-menu-price"></span>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Beef Stir Fry</h4>
+                                    <p>Succulent beef with fresh vegetables</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Jollof Rice, Fried Rice And Moinmoin</h4>
+                                    <p>Traditional Nigerian classic rice with exquisite bean pudding</p>
+                                </div>
+                            </li>
+                            <li>
+                              <div class="starms-menu-item-info">
+                                  <h4>Fried Rice</h4>
+                                  <p>Colorful fried rice with mixed vegetables</p>
+                              </div>
+                          </li>
+                            <li>
+                              <div class="starms-menu-item-info">
+                                  <h4>Ewa Agoyin</h4>
+                                  <p>Soft mashed beans with spicy pepper sauce</p>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="starms-menu-item-info">
+                                <h4>Yam Porridge (Asaro)</h4>
+                                <p>Soft cooked yam with tomato,pepper sauce and palmoil</p>
+                            </div>
+                        </li>
+                        <li>
+                          <div class="starms-menu-item-info">
+                              <h4>Pepper Soup</h4>
+                              <p>Traditional Nigerian pepper soup with fresh meat/fish</p>
+                          </div>
+                      </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="starms-menu-category">
+                        <div class="starms-menu-category-header">
+                            <div class="starms-menu-icon">
+                                <i class="fas fa-bread-slice"></i>
+                            </div>
+                            <h3>Side Dishes</h3>
+                        </div>
+                        <ul class="starms-menu-items">
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Fried Yam</h4>
+                                    <p>Crispy yam slices with pepper sauce/eggs</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Peppered Snails</h4>
+                                    <p>Spicy sauce with snails</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Fried Plantain</h4>
+                                    <p>Sweet fried plantain slices w/o sauce</p>
+                                </div>
+                            </li>
+                            <li>
+                              <div class="starms-menu-item-info">
+                                  <h4>Suya</h4>
+                                  <p>Spicy grilled meat</p>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="starms-menu-item-info">
+                                <h4>Gizdodo</h4>
+                                <p>A mix of gizzard and fried plaintain in spicy sauce</p>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="starms-menu-category">
+                        <div class="starms-menu-category-header">
+                            <div class="starms-menu-icon">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                            <h3>Desserts</h3>
+                        </div>
+                        <ul class="starms-menu-items">
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Cake</h4>
+                                    <p>Rich fruits or butter cake with smooth frosting</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Fruit Salad</h4>
+                                    <p>Fresh seasonal fruits with honey</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="starms-menu-item-info">
+                                    <h4>Doughnuts</h4>
+                                    <p>Deep-fried yeast dough with dusted sugar</p>
+                                </div>
+                            </li>
+                            <li>
+                              <div class="starms-menu-item-info">
+                                  <h4>Zobo</h4>
+                                  <p>Frozen fruit made with hisbiscus drink and sweeteners</p>
+                              </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="starms-section starms-gallery-section">
+          <div class="starms-container">
+            <div class="starms-section-header">
+              <h2>Our Gallery</h2>
+              <p>Take a look at some of our beautifully presented dishes and memorable events</p>
+            </div>
+      
+            <div id="gallery-items" class="starms-gallery"></div>
+          </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="starms-section starms-contact-section">
+            <div class="starms-container">
+                <div class="starms-section-header">
+                    <h2>Contact Us</h2>
+                    <p>Ready to make your event unforgettable? Get in touch with us today!</p>
+                </div>
+                
+                <div class="starms-contact">
+                    <div class="starms-contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="starms-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+2347019400439">+234 701 940 0439</a></p>
+                            </div>
+                        </div>
+                        <div class="starms-contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/2348066679101" target="_blank" rel="noopener noreferrer">+234 806 667 9101</a></p>
+                            </div>
+                        </div>
+                        <div class="starms-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:starmscatering@gmail.com">starmscatering@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="starms-contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contact-form">
+                            <div class="starms-form-grid">
+                                <div class="starms-form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="starms-form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="starms-form-grid">
+                                <div class="starms-form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="starms-form-group">
+                                    <label for="event-type">Event Type</label>
+                                    <select id="event-type" name="event-type">
+                                        <option value="">Select Event Type</option>
+                                        <option value="wedding">Wedding</option>
+                                        <option value="corporate">Corporate Event</option>
+                                        <option value="birthday">Birthday Party</option>
+                                        <option value="anniversary">Anniversary</option>
+                                        <option value="anniversary">Burial Ceremony</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="starms-form-group" id="other-event-group" style="display: none;">
+                              <label for="other-event-type">Please specify the event type</label>
+                              <input
+                                type="text"
+                                id="other-event-type"
+                                name="other-event-type"
+                                placeholder="e.g., Housewarming, Seminar"
+                              />
+                            </div>
+                            <div class="starms-form-grid">
+                                <div class="starms-form-group">
+                                    <label for="event-date">Event Date</label>
+                                    <input type="date" id="event-date" name="event-date">
+                                </div>
+                                <div class="starms-form-group">
+                                    <label for="guest-count">Number of Guests</label>
+                                    <input type="number" id="guest-count" name="guest-count" min="1">
+                                </div>
+                            </div>
+                            <div class="starms-form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your event and any special requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="starms-btn starms-btn-primary starms-btn-full">
+                                <i class="fas fa-paper-plane"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="starms-section starms-faq-section">
+            <div class="starms-container">
+                <div class="starms-section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about our catering services</p>
+                </div>
+
+                <div class="starms-faq-container">
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="slide-left">
+                            <h3>What types of events do you cater?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>We cater to a wide range of events including weddings, corporate functions, birthday parties, and more. Whether it's an intimate gathering or a large celebration, we have the expertise to make your event a success.</p>
+                        </div>
+                    </div>
+
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>How far in advance should I book your catering services?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>We recommend booking at least a week in advance for most events. For large events or peak seasons (holidays, wedding season), we suggest booking 2-4 weeks ahead to ensure availability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>Do you accommodate dietary restrictions and allergies?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>Absolutely! We can accommodate various dietary needs including vegetarian, vegan, gluten-free, and other specific dietary requirements. Please inform us of any allergies or restrictions when booking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>What's included in your catering packages?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>Our packages typically include food preparation, serving staff, basic serving equipment, and cleanup. We can also provide additional services like decorations, equipment rental, hotel reservation, event venues, security personnel/bouncers and event coordination for an additional fee.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>Do you provide serving staff for events?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>Yes, we provide professional serving staff for all our catering events. Our team is trained to deliver exceptional service and ensure your guests have a wonderful dining experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>Can you create custom menus for events?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>Yes, we can create custom menus tailored to your event's theme and dietary requirements. Our team will work with you to design a menu that fits your vision and satisfies your guests.</p>
+                        </div>
+                    </div>
+
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>What areas do you serve?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>We primarily serve the Osun metropolitan area and surrounding regions. For events outside our standard service area, we may charge additional delivery fees. Contact us to discuss your specific location.</p>
+                        </div>
+                    </div>
+
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3>How many guests can you accommodate?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>We can accommodate events of various sizes, from intimate gatherings of guests to large celebrations of up to 500 guests or more-depending on preferred specifications. For very large events, we may recommend additional planning and coordination to ensure everything runs smoothly.</p>
+                        </div>
+                    </div>
+
+                    <div class="starms-faq-item">
+                        <div class="starms-faq-question" data-aos="zoom-in">
+                            <h3></h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="starms-faq-answer">
+                            <p>We can accommodate events of various sizes, from intimate gatherings of 20 guests to large celebrations of up to 500 guests or more-depending on preferred specifications. For very large events, we may recommend additional planning and coordination to ensure everything runs smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="starms-section starms-reviews-section">
+            <div class="starms-container">
+                <div class="starms-section-header">
+                    <h2>Client Reviews</h2>
+                    <p>See what our satisfied clients have to say about our services</p>
+                </div>
+                
+                <div class="starms-reviews-container">
+                    <div class="starms-reviews-list" id="reviews-list">
+                    </div>
+                    
+                    <div class="starms-review-form-section">
+                        <h3>Share Your Experience</h3>
+                        <form id="review-form">
+                            <div class="starms-form-group">
+                                <label for="review-name">Your Name *</label>
+                                <input type="text" id="review-name" name="reviewerName" placeholder="e.g., Adetayo Mark" required>
+                            </div>
+                            <div class="starms-form-group">
+                                <label>Your Rating *</label>
+                                <div class="starms-star-rating" id="star-rating">
+                                    <i class="fas fa-star" data-rating="1"></i>
+                                    <i class="fas fa-star" data-rating="2"></i>
+                                    <i class="fas fa-star" data-rating="3"></i>
+                                    <i class="fas fa-star" data-rating="4"></i>
+                                    <i class="fas fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <div class="starms-form-group">
+                                <label for="review-comment">Your Review *</label>
+                                <textarea id="review-comment" name="reviewText" rows="4" required placeholder="Tell us about your experience with STARMS Catering..."></textarea>
+                            </div>
+                            <button type="submit" class="starms-btn starms-btn-primary starms-btn-full">
+                                <i class="fas fa-star"></i>Submit Review
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="starms-footer">
+        <div class="starms-footer-container">
+            <div class="starms-footer-grid">
+                <div class="starms-footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="starms-footer-contact">
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+2347019400439">+234 701 940 0439</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/2348066679101?text=I%20am%20interested%20in%20your%20catering%20services" target="_blank" rel="noopener noreferrer">
+                                +234 806 667 9101
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:starmscatering@gmail.com">starmscatering@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="starms-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="starms-footer-links">
+                        <li><button data-section="home">Home</button></li>
+                        <li><button data-section="about">About</button></li>
+                        <li><button data-section="menu">Our Menu</button></li>
+                        <li><button data-section="gallery">Gallery</button></li>
+                        <li><button data-section="contact">Contact</button></li>
+                    </ul>
+                </div>
+                
+                <div class="starms-footer-section">
+                   <h3>Follow Us</h3>
+                    <div class="starms-footer-social">
+                      <a href="https://www.facebook.com/share/16SjUGdzYD" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://instagram.com/starmscatering" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="https://x.com/StarmsCatering" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a href="https://tiktok.com/@starmscatering" target="_blank"><i class="fab fa-tiktok"></i></a>
+                      <a href="https://wa.me/2348066679101?text=I%20am%20interested%20in%20your%20catering%20services" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="starms-footer-section">
+                    <h3>Subscribe</h3>
+                    <p class="starms-footer-description">Get updates on our latest menus and offers!</p>
+                    <form id="newsletter-form" class="starms-footer-form" action="https://formspree.io/f/mkgbvynj" method="POST">
+                        <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Your email"
+                        required class="starms-footer-input"
+                        />
+                        <button type="submit" class="starms-footer-submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="starms-footer-bottom">
+                <p>&copy; 2025 STARMS Catering | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script src="script.js"></script>
+
+</div>
+</body>
+</html>
