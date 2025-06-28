@@ -127,7 +127,7 @@ body {
   box-shadow: 0 2px 8px rgba(255, 88, 88, 0.08);
 }
 
-.logoutBtn .actions button:hover {
+.logoutBtn:hover {
   background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
   transform: translateY(-2px) scale(1.04);
 }
